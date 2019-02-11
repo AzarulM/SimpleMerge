@@ -6,22 +6,34 @@
  */
 public class SimpleMerge {
     public static int[] simpleMerge(int[] arr1, int[] arr2) {
-        int[] arr3 = new int[arr1.length+arr2.length];
-        for(int i = 0; i<arr1.length; i++){
-            arr3[i] = arr1[i];
+        int x = arr1.length;
+        int y = arr2.length;
+        int[] mergeArr = new int[x + y];
+        for (int i = 0; i < x; i++) {
+            mergeArr[i] = arr1[i];
         }
-        for(int i = arr1.length; i < arr1.length+arr2.length;i++) {
-            arr3[i] = arr2[i - arr1.length];
+        for (int i = arr1.length; i < x + y; i++) {
+            mergeArr[i] = arr2[i - x];
         }
-        mergeSort(arr3);
-        return arr3;
+
+        for (int j = 0; j < mergeArr.length; j++) {
+            for (int k = j + 1; k < mergeArr.length; k++)
+            {
+                if (mergeArr[j] < mergeArr[k])
+                {
+                    
+                }
+            }
+        }
+        return mergeArr;
     }
-    public static void mergeSort(int[] arr){
+}
+    /*public static void mergeSort(int[] arr){
         int n = arr.length;
         int[] temp = new int[n];
         mergeSortHelper(arr,0,n-1,temp);
     }
-    public static void mergeSortHelper(int[] arr, int left, int right, int[] temp){
+    /*public static void mergeSortHelper(int[] arr, int left, int right, int[] temp){
         if(left<right){
             int mid = (left+right)/2;
             mergeSortHelper(arr,left,mid,temp);
@@ -58,4 +70,4 @@ public class SimpleMerge {
             arr[k] = temp[k];
         }
     }
-}
+}*/
