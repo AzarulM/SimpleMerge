@@ -19,7 +19,7 @@ public class SimpleMerge {
         for (int j = 0; j < mergeArr.length; j++) {
             for (int k = j + 1; k < mergeArr.length; k++)
             {
-                if (mergeArr[j] < mergeArr[k])
+                if (mergeArr[j] > mergeArr[k])
                 {
                     int temp = mergeArr[j];
                     mergeArr[j] = mergeArr[k];
