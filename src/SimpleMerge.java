@@ -21,7 +21,9 @@ public class SimpleMerge {
             {
                 if (mergeArr[j] < mergeArr[k])
                 {
-                    
+                    int temp = mergeArr[j];
+                    mergeArr[j] = mergeArr[k];
+                    mergeArr[k] = temp;
                 }
             }
         }
